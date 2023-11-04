@@ -25,7 +25,7 @@ public class LottoView {
 				setMoneyInner();
 				loopFlag = false;
 			} catch (IllegalArgumentException e) {
-				System.err.println(e.getMessage());
+				System.out.println(e.getMessage());
 				loopFlag = true;
 			}
 		}
@@ -57,7 +57,7 @@ public class LottoView {
 				setWinnerLottoInner();
 				loopFlag = false;
 			} catch (IllegalArgumentException e) {
-				System.err.println(e.getMessage());
+				System.out.println(e.getMessage());
 				loopFlag = true;
 			}
 		}
@@ -80,7 +80,7 @@ public class LottoView {
 				setBonusNumberInner();
 				loopFlag = false;
 			} catch (IllegalArgumentException e) {
-				System.err.println(e.getMessage());
+				System.out.println(e.getMessage());
 				loopFlag = true;
 			}
 		}

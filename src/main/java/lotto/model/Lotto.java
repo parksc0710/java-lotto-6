@@ -35,10 +35,6 @@ public class Lotto {
         return false;
     }
     
-    public void setOrderAsc() {
-    	numbers.sort(null);
-    }
-    
     public List<Integer> getNumbers() {
     	return this.numbers;
     }

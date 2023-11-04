@@ -22,10 +22,17 @@ public class LottoBiz {
 	}
 
 	public static String makeMyLotto() {
-		Lotto myLotto = new Lotto(Randoms.pickUniqueNumbersInRange(1, 45, 6));
-		myLotto.setOrderAsc();
+		List<Integer> randomNums = Randoms.pickUniqueNumbersInRange(1, 45, 6);
+		randomNums = sortRandomNumber(randomNums);
+		Lotto myLotto = new Lotto(randomNums);
 		Application.MY_LOTTO.add(myLotto);
 		return myLotto.getNumbersString();
+	}
+
+	public static List<Integer> sortRandomNumber(List<Integer> randomNums) {
+		return randomNums.stream()
+            .sorted()
+            .collect(Collectors.toList());
 	}
 
 	public static void checkInpuMoney(String inputMoney) {
